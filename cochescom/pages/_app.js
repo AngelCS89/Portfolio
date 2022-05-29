@@ -1,4 +1,5 @@
 import Header from 'components/Header'
+import Hero from 'components/Hero'
 
 import GlobalStyles from 'components/GlobalStyles/GlobalStyles'
 import theme from '../theme/theme.js'
@@ -11,6 +12,7 @@ function MyApp({ Component, pageProps }) {
 
                 <GlobalStyles />
                 <Header/>
+                <Hero/>
                 <Component {...pageProps} />
 
         </>
@@ -20,9 +22,9 @@ function MyApp({ Component, pageProps }) {
 const { publicRuntimeConfig } = getConfig()
 
 MyApp.getInitialProps = async () => {
-    const res = await fetch(`https://dummy.restapiexample.com/api/v1//employee/1`)
-    console.log(res)
-    const navigation = await res.json()
+    const res = await fetch(`${publicRuntimeConfig.API_URL}`)
+    const navigation =  await res.json()
+    console.log(navigation)
 
     return { navigation }
 }

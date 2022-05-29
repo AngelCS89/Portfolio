@@ -1,21 +1,25 @@
 import styled from '@emotion/styled'
 import Link from 'next/link'
 
-function Card ({ cars }) {
+function Card ({ car }) {
     const { API_URL } = process.env
-
+    const carImage = car.makeAndModel.replace(/\s/g, '-').toLowerCase() +'.webp'
+    console.log('carImage', carImage)
     return (
         <CardStyled>
             <div className="poster">
-                <img src={API_URL + movie.movie_poster.url} alt=""/>
+                <img src={`/assets/cars/${carImage}`} alt=""/>
             </div>
             <div className="body">
-                <h3>{ movie.movie_title }</h3>
-                <p dangerouslySetInnerHTML={{ __html: movie.description }} />
-
-                <Link href="/movies/[genre]/[slug]" as={`/movies/${movie.genre.slug}/${movie.slug}`}>
-                    <a>More about this movie</a>
-                </Link>
+                <div >
+                    <h3>{ car.price } Euros</h3>
+                </div>
+                <div >
+                    <h3>{ car.location }</h3>
+                </div>
+                <div >
+                    <h3>{ car.makeAndModel }</h3>
+                </div>
             </div>
         </CardStyled>
     )

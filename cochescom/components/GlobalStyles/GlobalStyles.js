@@ -17,6 +17,7 @@ const GlobalStyles = () => (
             aside,
             footer,
             header,
+            hero,
             nav,
             section {
                 display: block;

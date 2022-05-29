@@ -1,29 +1,25 @@
 import styled from '@emotion/styled'
 import { rem } from 'polished'
-
 import Link from 'next/link'
 
-function Header({ isDark }) {
+function Header() {
     return (
-        <HeaderStyled isDark={isDark}>
-
+        <HeaderStyled>
 
                     <div className="logo">
                         <Link href="/">
                             <a>
                                 <img src="/images/logo-cochescom.png" alt="coches logo" />
-                                <span className="logo-text">Coches.com</span>
                             </a>
                         </Link>
                     </div>
-
 
         </HeaderStyled>
     )
 }
 
 const HeaderStyled = styled.header`
-    background: ${props => props.isDark ? '#000000' : '#efefef' };
+    background: #ffff;
     padding: 20px;
 
     .logo {
