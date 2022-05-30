@@ -6,9 +6,9 @@ function Hero() {
         <HeroStyled>
             <div className="Hero">
                <div className="Texts">
-                <div>
-                    <h1>Coches de segunda mano</h1>
-                </div>
+                    <div>
+                        <h1>Coches de segunda mano</h1>
+                    </div>
                     <div>
                         <p> Dale una segunda vida a los 80000 coches de segunda mano o de ocasion que tenemos para ti.</p>
                     </div>
@@ -33,6 +33,7 @@ const HeroStyled = styled.div`
         text-align: center;
         color: white;
         family-font: sans-serif;
+        justify-content: flex-end;
 
         h1 {
             margin: 0 0 6px;

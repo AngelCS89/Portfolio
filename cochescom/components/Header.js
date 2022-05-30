@@ -9,7 +9,7 @@ function Header() {
                     <div className="logo">
                         <Link href="/">
                             <a>
-                                <img src="/images/logo-cochescom.png" alt="coches logo" />
+                                <img src="/images/logo-cochescomw.png" alt="coches logo" />
                             </a>
                         </Link>
                     </div>
@@ -21,19 +21,11 @@ function Header() {
 const HeaderStyled = styled.header`
     background: #ffff;
     padding: 20px;
-
     .logo {
         a {
             display: flex;
             align-items: center;
             text-decoration: none;
-        }
-
-        .logo-text {
-            color: #333333;
-            font-weight: bold;
-            font-size: ${rem(20)};
-            margin-left: 20px;
         }
     }
 `

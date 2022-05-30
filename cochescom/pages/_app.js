@@ -1,6 +1,6 @@
 import Header from 'components/Header'
 import Hero from 'components/Hero'
-
+import { ThemeProvider } from '@emotion/react'
 import GlobalStyles from 'components/GlobalStyles/GlobalStyles'
 import theme from '../theme/theme.js'
 import getConfig from 'next/config'

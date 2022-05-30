@@ -17,10 +17,12 @@ const Home = ({ cars }) => {
                 borderRadius: '12px',
                 boxShadow: 1,
                 fontWeight: 'bold',
+                flexWrap: 'wrap',
+                margin: '20px'
             }}>
                 {cars.map(car => (
-                <Box key={car.id}  >
-                        <Card car={car} />
+                <Box key={car.id} sx={{ width: '20%', margin: '10px'}} >
+                    <Card car={car} />
                 </Box >
                 ))}
             </Box>
